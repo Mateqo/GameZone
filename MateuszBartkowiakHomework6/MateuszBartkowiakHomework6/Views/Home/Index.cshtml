@@ -1,0 +1,98 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<link href="@Url.Content("~/css/site.css")" rel="stylesheet" />
+
+
+<div id="home">
+    <h1>
+        Witaj na GameZone!
+    </h1>
+    <p>
+        Szukasz tanich i sprawdzonych gier? Tylo u nas kupisz i odbierzesz je w chwilę bez żadnego ryzyka. Nie trać Swojego cennego
+        czasu i zamów u nas, ze wględu na szybką i sprawną dostawę.
+    </p>
+</div>
+
+<!--Slider ze zdjęciami-->
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <!--Itemy czyli zdjęcie które są w sliderze-->
+        <div class="item active">
+            <img src="~/Content/Images/games.jpg" alt="games" class="img-responsive" />
+        </div>
+        <div class="item">
+            <img src="~/Content/Images/xbox.jpg" alt="xbox" class="img-responsive" />
+            <div class="carousel-caption" role="option">
+                <p>
+                    <p>
+                    Posiadamy wysoki wybór gier na Xbox One.
+                    </p>
+                    <a class="btn btn-default" href="https://www.xbox.com/pl-PL" target="_blank">
+                        Learn More
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/Content/Images/ps4.png" alt="ps" class="img-responsive" />
+            <div class="carousel-caption" role="option">
+                <p>
+                    <p>
+                    Znajdziesz również coś na ps4.
+                    </P>
+                    <a class="btn btn-default" href="https://www.playstation.com/pl-pl/" target="_blank">
+                        Learn More
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Poprzednie zdjęcie -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <!-- Następne zdjęcie -->
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+
+<div id="picture">
+    <img src="~/Content/Images/logo.png" />
+</div>
+
+<!-- Użycie bootrstrapa do ustawienia elementu na stronie -->
+<div id="why" class="col-md-6 col-md-offset-3">
+    <h2>Dlaczego u nas?</h2>
+    <ul>
+        <li>sprawdzony sprzedawca,</li>
+        <li>bezpieczeństwo zakupów,</li>
+        <li>gwarancja dostępności,</li>
+        <li>oryginalne produkty,</li>
+        <li>bezpłatna dostawa 24h</li>
+    </ul>
+</div>
+
+<div class="buy">
+    <img src="~/Content/Images/buy.png" />
+</div>
+
+<!--Scrolowanie w górę-->
+<div class="scroll">
+    <a id="scrollup" href="#"><img src="~/Content/Images/up.png" /></a>
+</div>
+
+<div class="footer">
+    Autor strony: Mateusz Bartkowiak &copy; 2020
+</div>
+

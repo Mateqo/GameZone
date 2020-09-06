@@ -1,0 +1,48 @@
+﻿@model OpinionViewModel
+@{
+    ViewData["Title"] = "Opinion";
+}
+
+<div class="text-center">
+    <br />
+    <br />
+    <img height="200" width="400" src="~/Content/Images/review.webp" />
+    <br />
+    <h2>Wyślij nam swoją opinię</h2>
+    <h2>Dziękujemy!</h2>
+    <br />
+
+    <!-- Formularz kontaktowy -->
+    @using (Html.BeginForm("Opinion", "Home", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+        <!--Nazwa-->
+        <div class="form-horizontal">
+            @Html.LabelFor(model => model.Username)
+            <div>
+                @Html.EditorFor(model => model.Username)
+            </div>
+        </div>
+        <br />
+        <!--Opis/opinia-->
+        <div class="form-horizontal">
+            @Html.LabelFor(model => model.Description)
+            <div>
+                @Html.TextAreaFor(m => m.Description,5,1, new { @class = "form-control" })
+            </div>
+        </div>
+
+        <br />
+
+        <!--Potwierdzenie formularza-->
+        <div class="form-group">
+            <input type="submit" value="Wyślij opinię" class="btn btn-success" />
+        </div>
+    }
+
+</div>
+<div class="footer">
+    Autor strony: Mateusz Bartkowiak &copy; 2020
+</div>
+

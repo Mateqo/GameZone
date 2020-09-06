@@ -1,0 +1,77 @@
+﻿@model ContactFormViewModel
+@{
+    ViewData["Title"] = "ContactForm";
+}
+
+
+<div class="text-center">
+
+    <h2>Uzupełnij dane:</h2>
+    <br />
+
+    <!-- Formularz kontaktowy -->
+    @using (Html.BeginForm("ContactForm", "Home", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+        <!--Imię-->
+        <div class="form-horizontal">
+            @Html.LabelFor(model => model.FirstName)
+            <div>
+                @Html.EditorFor(model => model.FirstName)
+            </div>
+        </div>
+
+        <!--Nazwisko-->
+        <div class="form-horizontal">
+            @Html.LabelFor(model => model.LastName)
+            <div>
+                @Html.EditorFor(model => model.LastName)
+            </div>
+        </div>
+
+        <!--Email-->
+        <div class="form-horizontal">
+            @Html.LabelFor(model => model.Email)
+            <div>
+                @Html.EditorFor(model => model.Email)
+            </div>
+        </div>
+
+        <!--Miejscowość-->
+        <div class="form-horizontal">
+            @Html.LabelFor(model => model.Location)
+            <div>
+                @Html.EditorFor(model => model.Location)
+            </div>
+        </div>
+
+        <!--Address-->
+        <div class="form-horizontal">
+            @Html.LabelFor(model => model.Address)
+            <div>
+                @Html.EditorFor(model => model.Address)
+            </div>
+        </div>
+        <br />
+        <!--Potwierdzenie formularza-->
+        <div class="form-group">
+
+            <input type="submit" value="Wyślij" class="btn btn-success" />
+
+        </div>
+    }
+    
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<!-- Stopka -->
+<div class="footer">
+    Autor strony: Mateusz Bartkowiak &copy; 2020
+</div>
+

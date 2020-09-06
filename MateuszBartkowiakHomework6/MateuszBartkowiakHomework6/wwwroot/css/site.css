@@ -1,0 +1,306 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
+for details on configuring this project to bundle and minify static web assets. */
+
+/* Dodanie czcionek z google fonts */
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Girassol&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+body {
+    background-image: url(/Content/Images/tic-tac-toe.png);
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+
+#logo {
+    font-family: 'Lobster', cursive;
+    font-size: 35px;
+    margin-right: 30px;
+}
+
+.navigation {
+    font-size: 20px;
+    font-family: 'Girassol', cursive;
+}
+
+h1 {
+    font-family: 'Girassol', cursive;
+    font-size:40px;
+}
+
+h2 {
+    font-family: 'Girassol', cursive;
+    font-size:40px;
+}
+
+#home {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 25px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom:20px;
+}
+
+#picture {
+    margin-bottom:20px;
+    margin-top:20px;
+    text-align: center;
+}
+
+#picture img{
+
+    height:100px;
+    width:80px;
+}
+
+#why {
+    text-align:center;
+    border: 10px solid #434343;
+    border-radius: 15px 50px 30px;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    font-family: 'Montserrat', sans-serif;
+    font-size:20px;
+}
+
+#why ul{
+    display: inline-block;
+}
+
+
+.scroll {
+    text-align: center;
+    height: 100px;
+    width: 100px;
+    border: none;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.footer {
+    width:100%; 
+    text-align: center;
+    padding: 20px;
+    color: white;
+    background-color: black;
+    /* przezroczystość */
+    opacity: 0.7;
+}
+
+.buy{
+    text-align:center;
+    margin-bottom:40px;
+    margin-top:30px;
+}
+.buy img{
+    width:420px;
+    height:200px;
+}
+
+.productPc{
+    border: 5px solid #444444;
+    border-radius: 15px 50px 30px;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+
+.productXbox {
+    /* obramowanie */
+    border: 5px solid #0E7A0D;
+    border-radius: 15px 50px 30px;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+
+.productPs4 {
+    border: 5px solid #4169E1;
+    border-radius: 15px 50px 30px;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+
+.game img{
+    width:120px;
+    height:170px;
+    border-radius:3px;
+}
+
+.game{
+    text-align:center;
+    margin-top:40px;
+}
+
+.info img{
+    width: 170px;
+    height: 120px;
+    /* zaokrąglenie rogów */
+    border-radius:3px;
+    margin-bottom:10px;
+}
+
+
+.gameplay{
+    margin-top:10px;
+}
+
+.add{
+    margin-top:30px;
+    text-align:center;
+    margin-bottom:10px;
+}
+
+.add p{
+    /* pogrubienie */ 
+    font-weight:bold;
+}
+
+/* ustawiamy kolori i usuwamy podkreślenie (domyślnie wygląd jak link) */
+.add a{
+    color:white;
+}
+
+.add a:hover{
+    text-decoration:none;
+}
+
+.category {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Girassol', cursive;
+}
+
+.category a{
+    color: #9D9D9D;
+    /* odstęp między literami */
+    letter-spacing:4px;
+}
+
+.category a:hover{
+    text-decoration:none;
+    color:white;
+}
+
+.category button {
+    background-color:#101010;
+    border-radius:5px;
+    padding:5px;
+}
+
+.trolley{
+    text-align:center;
+}
+
+.trolley img{
+    width:80px;
+    height:110px;
+}
+
+.trolley hr{
+    color:black;
+    background-color:black;
+}
+
+.trolley-info {
+    margin-top: 30px;
+    margin-bottom: 70px;
+}
+
+.trolley-info a{
+    color:white;
+}
+
+.trolley-info a:hover{
+    color:white;
+    text-decoration:none;
+}
+
+.trolley-title {
+    margin-top: 30px;
+    border-bottom: solid 3px black;
+    margin-bottom:25px;
+}
+
+.trolley-summary{
+    border-top:solid 3px black;
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.trolley-summary a{
+    color:white;
+}
+
+.trolley-summary a:hover{
+    text-decoration:none;
+}
+
+.trolley-summary-button{
+    margin-top:20px;
+}
+
+
+.cancel-product {
+    background-color: #CF2929;
+}
+
+.cancel-product:hover {
+    background-color: #801818;
+}
+
+.cancel-all {
+    background-color: #CF2929;
+    margin-top: 20px;
+    margin-bottom:15px;
+}
+
+.cancel-all:hover{
+    background-color:#801818;
+}
+
+.empty-trolley{
+    margin-top:75px;
+    margin-bottom:75px;
+}
+
+
+
+
+

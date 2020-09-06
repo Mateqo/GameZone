@@ -1,0 +1,94 @@
+﻿@model List<GameViewModel>
+@{
+    ViewData["Title"] = "Trolley";
+}
+
+
+<div class="trolley col-md-12">
+    <div class="col-md-12">
+        <div class="trolley-title col-md-3">
+            <h2>Produkt</h2>
+        </div>
+        <div class="trolley-title col-md-9">
+            <div class="col-md-3">
+                <h2>Nazwa</h2>
+            </div>
+            <div class="col-md-3">
+                <h2>Platforma</h2>
+            </div>
+            <div class="col-md-3">
+                <h2>Cena</h2>
+            </div>
+            <div class="col-md-3">
+                <h2>Usuń</h2>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Wyszukaj gry zakupione -->
+    @foreach (var game in Model)
+
+    {
+
+        <div class="col-md-12">
+            <div class="col-md-3">
+                <img src="@Url.Content(game.Photo)" alt="@game.Name" />
+            </div>
+            <div class="trolley-info col-md-9">
+                <div class="col-md-3">
+                    <h4>@game.Name</h4>
+                </div>
+                <div class="col-md-3">
+                    <h4>@game.Platform</h4>
+                </div>
+                <div class="col-md-3">
+                    <h4>@game.Price zł</h4>
+                </div>
+                <div class="col-md-3">
+                    <!-- użycie ActionLinka który przekierowuje do kontrolera-->
+                    <button class="btn btn-success cancel-product">
+                        @Html.ActionLink("Usuń z koszyka",
+           "EmptyTrolley",
+           "Home")
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    }
+
+    <div class="trolley-summary col-md-12">
+
+        <div class="text-center">
+            <!-- Cena końcowa -->
+            <h2>Cena końcowa: @Model.FirstOrDefault().Price zł</h2>
+        </div>
+
+        <div class="text-capitalize text-center">
+            <button class="btn btn-success">
+                @Html.ActionLink("Zamów",
+"ContactForm",
+"Home")
+                    </button>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="buy">
+    <img src="~/Content/Images/buy.png" />
+</div>
+
+<div class="scroll">
+    <a id="scrollup" href="#"><img src="~/Content/Images/up.png" /></a>
+</div>
+
+<div class="footer">
+    Autor strony: Mateusz Bartkowiak &copy; 2020
+</div>
+

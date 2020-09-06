@@ -1,0 +1,87 @@
+﻿@model List<GameViewModel>
+@{
+    ViewData["Title"] = "PS4";
+}
+<link href="@Url.Content("~/css/site.css")" rel="stylesheet" />
+
+
+<!-- Kategorie (filtry) -->
+<div class="category">
+
+    <button>
+        @Html.ActionLink("RPG",
+               "GetGameByType",
+               "Home",
+               new { type ="RPG",platform="PS4"  },
+               null)
+    </button>
+
+    <button>
+        @Html.ActionLink("SHOOTER",
+               "GetGameByType",
+               "Home",
+               new { type = "Shooter", platform= "PS4" },
+               null)
+    </button>
+
+    <button>
+        @Html.ActionLink("ADVENTURE",
+               "GetGameByType",
+               "Home",
+               new { type = "Adventure", platform= "PS4" },
+               null)
+    </button>
+
+</div>
+
+<!-- Wuszukiwanie gier -->
+@foreach (var game in Model)
+
+{
+    <!-- Jeśli gra na PS4 wypisz ją -->
+    @if (game.Platform == "PS4")
+    {
+        <div class="productPs4 col-md-12">
+            <div class="game col-md-3">
+                <img src="@Url.Content(game.Photo)" alt="@game.Name" />
+                <h4>Rok produkjci: @game.YearOfProduction</h4>
+                <h4>Gatunek: @game.Type</h4>
+                <h4>Platforma: @game.Platform</h4>
+            </div>
+            <div class="info col-md-9">
+                <div class="col-md-12">
+                    <h2>@game.Name</h2>
+                    <h4>@game.Description</h4>
+                </div>
+                <div class="col-md-12">
+                    <div class="gameplay text-center col-md-8">
+                        <img src="@Url.Content(game.Gameplay1)" alt="@game.Name Gameplay1" />
+                        <img src="@Url.Content(game.Gameplay2)" alt="@game.Name Gameplay2" />
+                    </div>
+                    <div class="add col-md-3">
+                        <p>Cena: @game.Price zł</p>
+                        <!-- użycie ActionLinka który przekierowuje do kontrolera i wysyła dane o grze -->
+                        <button class="btn btn-success">
+                            @Html.ActionLink("Dodaj do koszyka",
+               "Trolley",
+               "Home",
+               new { platform =game.Platform,name=game.Name },
+               null)
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    }
+}
+        <div class="col-md-12">
+            <!-- Scrollowanie w górę -->
+            <div class="scroll">
+                <a id="scrollup" href="#"><img src="~/Content/Images/up.png" /></a>
+            </div>
+
+            <div class="footer">
+                Autor strony: Mateusz Bartkowiak &copy; 2020
+            </div>
+        </div>
